@@ -1,0 +1,16 @@
+Sauvegarde-----
+
+1 - Créer un répertoire nommé Backup sur le disque C (on aura donc C:/Backup).
+
+2 - Lancer l'invite de commande Windows: touche Windows + R ou bien saisir cmd dans la zone de recherche de la barre des tâches (Cortana).
+
+3 - Se positionner dans le répertoire bin du répertoire d'installation de MariaDB en tapant la commande :
+
+cd C:\wamp\bin\mysql\mysql8.0.18\bin
+
+4 - Pour effectuer la sauvegarde (ou « dump »), saisir la commande :
+
+mysqldump --user=root --password= --databases gescom_afpa > C:\Backup\backup_gescom_afpa.sql
+
+5 - L'option --databases est suivie du nom de la base à sauvegarder, ici gescom_afpa.
+Après le chevron vers la droite (>), on indique le chemin complet du répertoire sans lequel on veut stocker le fichier de sauvegarde et le nom du fichier de sauvegarde.

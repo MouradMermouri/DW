@@ -1,0 +1,17 @@
+Restauration
+
+1 - Par précaution, pour ne pas écraser la base actuelle déjà dans PhpMyAdmin, on va renommer cette base gescom_afpa\renamed_.
+
+Répétez les opérations 2 et 3 de la sauvegarde.
+
+Pour la restauration, on va utiliser la commande mysql, qui lance l'exécutable mysql.exe situé dans C:\wamp\bin\mysql\mysql8.0.18\bin.
+
+Exécutez la commande suivante :
+
+mysql --user=root --password= < C:\Backup\backup_gescom_afpa.sql
+
+Explications :
+On se connecte avec l'utilisateur root et son mot de passe (non renseigné dans notre cas)
+On indique ensuite le nom que prendra la base de données restaurée (qui pourra être celui d'origine, mais dans ce cas il pourra y avoir des erreurs ou pas selon que des instructions DROP, CREATE, IF...EXISTS sont contenues dans le fichier de sauvegarde)
+Notez le chevron vers la gauche cette fois
+Enfin, on indique le chemin vers le fichier de sauvegarde
